@@ -90,12 +90,35 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
+  use {
+    "nvim-treesitter/playground",
+    run = ":TSInstall query",
+  }
 
   -- Git
   use "lewis6991/gitsigns.nvim"
 
   -- Rest client
   use "NTBBloodbath/rest.nvim"
+  -- use "blackadress/rest.nvim"
+
+  -- Debugging
+  use {
+    "mfussenegger/nvim-dap",
+    opt = true,
+    event = "BufReadPre",
+    module = { "dap" },
+    wants = { "nvim-dap-virtual-text", "DAPInstall.nvim", "nvim-dap-ui", "nvim-dap-python", "which-key.nvim" },
+    requires = {
+      "Pocco81/DAPInstall.nvim",
+      "theHamsta/nvim-dap-virtual-text",
+      "rcarriga/nvim-dap-ui",
+      "mfussenegger/nvim-dap-python",
+      "nvim-telescope/telescope-dap.nvim",
+      -- { "leoluz/nvim-dap-go", module = "dap-go" },
+      -- { "jbyuki/one-small-step-for-vimkind", module = "osv" },
+    },
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
