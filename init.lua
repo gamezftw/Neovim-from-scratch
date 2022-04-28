@@ -20,4 +20,5 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 require "user.rest"
--- require "user.mydap"
+require "user.neogit"
+require "user.dap".setup()
