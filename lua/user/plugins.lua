@@ -121,6 +121,9 @@ return packer.startup(function(use)
   -- Neogit
   use "TimUntersberger/neogit"
 
+  -- csharp
+  use "chen244/csharpls-extended-lsp.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
