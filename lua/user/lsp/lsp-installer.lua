@@ -21,9 +21,9 @@ lsp_installer.on_server_ready(function(server)
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
-  if server.name == "omnisharp-fix-when-works" then
+  if server.name == "omnisharp" then
+    -- vim.lsp.set_log_level("debug")
     local omnisharp_opts = require("user.lsp.settings.omnisharp")
-    print(omnisharp_opts.setup)
     opts = vim.tbl_deep_extend("force", omnisharp_opts, opts)
   end
 

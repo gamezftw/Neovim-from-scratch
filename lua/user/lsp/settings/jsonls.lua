@@ -6,6 +6,14 @@ end
 
 local schemas = {
   {
+    description = "appsettings.json",
+    fileMatch = {
+      "appsettings.json",
+      "appsettings.*.json",
+    },
+    url = "https://json.schemastore.org/appsettings.json",
+  },
+  {
     description = "TypeScript compiler configuration file",
     fileMatch = {
       "tsconfig.json",

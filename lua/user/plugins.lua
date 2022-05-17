@@ -123,6 +123,15 @@ return packer.startup(function(use)
 
   -- csharp
   use "chen244/csharpls-extended-lsp.nvim"
+  use "Hoffs/omnisharp-extended-lsp.nvim"
+
+  -- markdown support
+  use { "ellisonleao/glow.nvim", branch = 'main' }
+  -- use {
+  --  "ellisonleao/glow.nvim",
+  --   branch = 'main',
+  --   run = ":GlowInstall",
+  -- }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
